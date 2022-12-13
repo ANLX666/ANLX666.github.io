@@ -1,4 +1,152 @@
-<p>Hello 大家好</p>
-<p>我是霸都丶lx，这是我的个人网站。 </p>
-<p>很高兴你来到这里, 你可以在以下的网站找到我</p>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>欢迎来到凉心的首页丫！</title>
+  <link rel="stylesheet" href="./1.13.css" />
+  <link rel="stylesheet" href="./common.css" />
+  <link rel="stylesheet" href="./font2/iconfont.css" />
+  <script src="./js/search.js"></script>
+  <!-- 樱花 -->
+  <!-- <script type="text/javascript" src="./yinghua.js"></script> -->
+  <link rel="icon" href="./imag/lx.jpg" sizes="192x192" />
+  <script>
+    function secondToDate(second) {
+      if (!second) {
+        return 0;
+      }
+      var time = new Array(0, 0, 0, 0, 0);
+      if (second >= 365 * 24 * 3600) {
+        time[0] = parseInt(second / (365 * 24 * 3600));
+        second %= 365 * 24 * 3600;
+      }
+      if (second >= 24 * 3600) {
+        time[1] = parseInt(second / (24 * 3600));
+        second %= 24 * 3600;
+      }
+      if (second >= 3600) {
+        time[2] = parseInt(second / 3600);
+        second %= 3600;
+      }
+      if (second >= 60) {
+        time[3] = parseInt(second / 60);
+        second %= 60;
+      }
+      if (second > 0) {
+        time[4] = second;
+      }
+      return time;
+    }
+  </script>
+  <script type="text/javascript" language="javascript">
+    function setTime() {
+      // 创建时间秒数，时间格式中，月比较特殊，是从0开始的，所以想要显示2月，得写1才行，如下
+      var create_time = Math.round(
+        new Date(Date.UTC(2022, 6, 11, 0, 0, 0)).getTime() / 1000
+      );
+      // 当前时间秒数,增加时区的差异
+      var timestamp = Math.round(
+        (new Date().getTime() + 8 * 60 * 60 * 1000) / 1000
+      );
+      currentTime = secondToDate(timestamp - create_time);
+      currentTimeHtml =
+        currentTime[0] +
+        "年" +
+        currentTime[1] +
+        "天" +
+        currentTime[2] +
+        "时" +
+        currentTime[3] +
+        "分" +
+        currentTime[4] +
+        "秒";
+      document.getElementById("htmer_time").innerHTML = currentTimeHtml;
+    }
+    setInterval(setTime, 1000);
+  </script>
+</head>
+
+<body>
+  
+	
+  <div id="snowMask"></div>
+  <div id="nav">
+    <div id="nav-content">
+      <div class="nav-left">
+        <a href="" class="nav-welcome">您好，欢迎进入凉心的空间</a>
+        <a href="./login.html">| 登录 |</a>
+        <!-- <a href="#" class="nav-active">注册</a> -->
+        <a href="">❤</a>
+        <!-- <button onclick="window.location.href='./login.html'" type="button" id  ="nav-active1">注册</button> -->
+        <!-- <button id  ="nav-active1">注册</button> -->
+      </div>
+      <div class="nav-right">
+        <a href="http://lxdaan.xiaopangkj.space/">进入习题答案库 ☆</a>
+        <a href="https://space.bilibili.com/674016996" class="nav-active">官方b站</a>
+        <a href="http://lx.xiaopangkj.space/001/Untitled-3.html">| 学习工具
+        </a>
+        <a href="https://blog.nowcoder.net/lx666">| 关注官方博客：</a>
+      </div>
+    </div>
+  </div>
+  
+  <div id="unique-1">
+    <div class="header">
+      <div class="logo-box">
+        <img src="./imag/lx.jpg" alt="" id="tupian" />
+      </div>
+      <div class="search-box">
+        <div class="search">
+          <input type="text" 
+          placeholder="     请输入你要搜索的内容"
+          id="search-txt" 
+          />
+          <button 
+          onclick="handleSearch()"
+          class="search-btn"
+          >搜索</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--  
+  <div class="slide-container">
+    <div class="com-wrapper slide-content">
+     
+      <div class="menu-left">
+       
+              <ul>
+                <li>
+                  <span class="iconfont icon-shangcheng"></span>
+                  <div class = "menu-info">
+                    <div><a href="#" class="menu-shopping">商城</a></div>
+                    <div>
+                      <a href="https://space.bilibili.com/674016996">课程视频</a>
+                      <a href="https://space.bilibili.com/674016996">直播</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <br>
+              <br>
+              <br>
+              <span class="iconfont icon-ziliaoku"></span>
+              
+                <div><a href="http://lxdaan.xiaopangkj.space/?i=1" class="menu-shopping">资料库</a></div>
+                <div>
+                  <a href="http://lxdaan.xiaopangkj.space/?i=1">资料答案</a>
+                  <a href="#"></a>
+      </div>
+    </div>
+  </div> -->
+  
+  <div id="htmer_time1">
+    网站已经安全运行：<span id="htmer_time" style="color: red"></span>
+  </div>
+</body>
+
+</html>

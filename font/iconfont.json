@@ -1,0 +1,23 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "7594038",
+      "name": "24gl-next",
+      "font_class": "24gl-next",
+      "unicode": "ea6b",
+      "unicode_decimal": 60011
+    },
+    {
+      "icon_id": "7594068",
+      "name": "24gl-previous",
+      "font_class": "24gl-previous",
+      "unicode": "ea73",
+      "unicode_decimal": 60019
+    }
+  ]
+}
